@@ -23,8 +23,8 @@ Install it like you install all your other plugins.
 
 #### Activation in Vim
 
-Here is an example for how to assign keyboard shortcuts to the different test commands.
-Put this in your `.vimrc` file.
+To assign keyboard shortcuts to the different test commands,
+put something like this in your `.vimrc` file:
 
 ```viml
 nnoremap <leader>f :call TestFile()<cr>
@@ -38,7 +38,10 @@ With these settings, you get the hotkeys:
 * __leader-O:__ re-run the last test
 
 
-To enable the auto-run feature, use this code in `.vimrc`:
+#### Auto-testing
+
+This feature automatically runs the last test on every file save.
+To enable it, add something like this to your `.vimrc`:
 
 ```viml
 nnoremap <leader>a :call ToggleTestAutorun()<cr>
@@ -54,5 +57,5 @@ if has("gui_running")
 endif
 ```
 
-__leader-A:__ toggles this auto-running on and off.
-When it is on, Tertestrial automatically runs the last test each time you save a file.
+__leader-A__ now toggles auto-running on and off.
+Hit __[cmd-s]__ to save and re-run the last test.
