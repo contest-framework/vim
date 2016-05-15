@@ -54,6 +54,7 @@ endfunction
 if has("gui_running")
   iunmenu File.Save
   imenu <silent> File.Save <Esc>:w<CR>:call AfterFileSave()<CR>
+  nmenu <silent> File.Save :call AfterFileSave()<CR>
 endif
 ```
 
