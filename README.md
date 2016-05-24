@@ -1,5 +1,5 @@
 # Tertestrial VIM plugin
-> TDD in Vim at your fingertips
+> pragmatic test auto-runner for Vim
 
 This is the [VIM](http://www.vim.org) plugin for [Tertestrial](https://github.com/kevgo/tertestrial-server).
 
@@ -21,31 +21,32 @@ Install it like you install all your other plugins.
 * restart Vim
 
 
-#### Activation in Vim
+## Activation in Vim
 
 To assign keyboard shortcuts to the different test commands,
 put something like this in your `.vimrc` file:
 
 ```viml
+" Tertestrial configuration
 nnoremap <leader>f :call TestFile()<cr>
 nnoremap <leader>l :call TestFileLine()<cr>
 nnoremap <leader>o :call RepeatLastTest()<cr>
+nnoremap <leader>a :call ToggleTestAutorun()<cr>
 ```
 
 With these settings, you get the hotkeys:
 * __leader-F:__ run the current test file completely
 * __leader-L:__ run only the test at the current cursor position
 * __leader-O:__ re-run the last test
+* __leader-A:__ activate/deactivate auto-running the last run test on saving (see below)
 
 
-#### Auto-testing
+## Auto-testing
 
-This feature automatically runs the last test on every file save.
+This feature automatically runs the last run test on every file save.
 To enable it, add something like this to your `.vimrc`:
 
 ```viml
-nnoremap <leader>a :call ToggleTestAutorun()<cr>
-
 function! AfterFileSave()
   if g:autotest
     call RepeatLastTest()
@@ -58,5 +59,4 @@ if has("gui_running")
 endif
 ```
 
-__leader-A__ now toggles auto-running on and off.
-Hit __[cmd-s]__ to save and re-run the last test.
+Now __[cmd-s]__ saves and re-runs the last test.
