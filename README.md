@@ -12,12 +12,12 @@ Install it like you install all your other plugins.
 
 ##### Vundle users
 
-* add `Bundle 'kevgo/tertestrial-vim'` to your .vimrc file
+* add `Bundle 'Originate/tertestrial-vim'` to your .vimrc file
 * restart Vim and run `:BundleInstall`
 
 ##### Pathogen users
 
-* `git clone git://github.com/kevgo/tertestrial-vim.git ~/.vim/bundle`
+* `git clone git://github.com/Originate/tertestrial-vim.git ~/.vim/bundle`
 * restart Vim
 
 
