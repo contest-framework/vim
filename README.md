@@ -39,7 +39,7 @@ autocmd BufWritePost * :call TertestrialFileSaved()
 ```
 
 With these settings, you get the hotkeys:
-* __leader-f:__ run the current test file completely
+* __leader-f:__ run the current test file
 * __leader-l:__ run only the test at the current cursor position
 * __leader-o:__ re-run the last test
 * __leader-a:__ activate/deactivate auto-running the last run test on saving (see below)
