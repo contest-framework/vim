@@ -27,6 +27,7 @@ To assign keyboard shortcuts to the different test commands,
 put something like this in your `.vimrc` file:
 
 ```viml
+nnoremap <leader>s :call TertestrialAll()<cr>
 nnoremap <leader>f :call TertestrialFile()<cr>
 nnoremap <leader>l :call TertestrialLine()<cr>
 nnoremap <leader>o :call TertestialRepeat()<cr>
@@ -39,7 +40,8 @@ autocmd BufWritePost * :call TertestrialFileSaved()
 ```
 
 With these settings, you get the hotkeys:
-* __leader-f:__ run the current test file completely
+* __leader-s:__ run the complete test suite
+* __leader-f:__ run the current test file
 * __leader-l:__ run only the test at the current cursor position
 * __leader-o:__ re-run the last test
 * __leader-a:__ activate/deactivate auto-running the last run test on saving (see below)
