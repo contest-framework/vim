@@ -17,7 +17,11 @@ Install it like you install all your other plugins.
 
 ##### Pathogen users
 
-* `git clone git://github.com/Originate/tertestrial-vim.git ~/.vim/bundle`
+* clone to the bundle folder:
+```
+cd ~/.vim/bundle
+git clone git://github.com/Originate/tertestrial-vim.git
+```
 * restart Vim
 
 
