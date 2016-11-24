@@ -1,8 +1,5 @@
-# Tertestrial VIM plugin
-> pragmatic test auto-runner for Vim
-
-This is the [VIM](http://www.vim.org) plugin for [Tertestrial](https://github.com/kevgo/tertestrial-server).
-
+<img src="documentation/logo.png" width="687" height="100" alt="logo">
+<hr>
 
 ## Installation
 
