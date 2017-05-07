@@ -56,13 +56,16 @@ endfunction
 
 
 
+if findfile('.tertestrial.tmp', '.;') == '.tertestrial.tmp'
+  let g:tertestrialPipePath = fnamemodify('.tertestrial.tmp', ':p')
+endif
 function! SendTestCommand(data, message)
-  if findfile('.tertestrial.tmp', '.;') == '.tertestrial.tmp'
-    call writefile([a:data], '.tertestrial.tmp')
+  if g:tertestrialPipePath != ''
+    call writefile([a:data], g:tertestrialPipePath)
     if a:message != ''
       echo a:message
     endif
   else
-    echoerr "ERROR: Tertestrial server is not running!"
+    echoerr "ERROR: Tertestrial server is not running in the directory in which you started Vim"
   endif
 endfunction
