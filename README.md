@@ -30,7 +30,7 @@ It always uses this server,
 even if you change the current working directory within Vim.
 
 
-##### Keyboard shortcuts
+## Keyboard shortcuts
 
 To assign keyboard shortcuts to the different test commands,
 put something like this in your `.vimrc` file:
