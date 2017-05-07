@@ -24,6 +24,14 @@ git clone git://github.com/Originate/tertestrial-vim.git
 
 ## Activation in Vim
 
+This plugin expects a running Tertestrial server
+in the working directory in which Vim is started.
+It always uses this server,
+even if you change the current working directory within Vim.
+
+
+##### Keyboard shortcuts
+
 To assign keyboard shortcuts to the different test commands,
 put something like this in your `.vimrc` file:
 
