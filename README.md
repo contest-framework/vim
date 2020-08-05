@@ -1,26 +1,25 @@
-<img src="documentation/logo.png" width="687" height="100" alt="logo">
-<hr>
+# Tertestrial plugin for Vim
 
 ## Installation
 
 This is a normal Vim plugin.
 Install it like you install all your other plugins.
 
-
 ##### Vundle users
 
-* add `Bundle 'Originate/tertestrial-vim'` to your .vimrc file
-* restart Vim and run `:BundleInstall`
+- add `Bundle 'kevgo/tertestrial-vim'` to your .vimrc file
+- restart Vim and run `:BundleInstall`
 
 ##### Pathogen users
 
-* clone to the bundle folder:
+- clone to the bundle folder:
+
 ```
 cd ~/.vim/bundle
-git clone git://github.com/Originate/tertestrial-vim.git
+git clone git://github.com/kevgo/tertestrial-vim.git
 ```
-* restart Vim
 
+- restart Vim
 
 ## Activation in Vim
 
@@ -41,13 +40,14 @@ autocmd BufWritePost * :call TertestrialFileSaved()
 ```
 
 With these settings, you get the hotkeys:
-* __leader-e:__ run the complete test suite
-* __leader-f:__ run the current test file
-* __leader-l:__ run only the test at the current cursor position
-* __leader-o:__ re-run the last test
-* __leader-a:__ activate/deactivate auto-running the last run test on saving (see below)
-* __leader-1:__ activate mapping 1
-* __leader-2:__ activate mapping 2
-* __leader-3:__ activate mapping 3
-* __leader-4:__ activate mapping 4
-* __[cmd-s]__ or `:w[<enter>]` saves the current buffer and re-runs the last test
+
+- **leader-e:** run the complete test suite
+- **leader-f:** run the current test file
+- **leader-l:** run only the test at the current cursor position
+- **leader-o:** re-run the last test
+- **leader-a:** activate/deactivate auto-running the last run test on saving (see below)
+- **leader-1:** activate mapping 1
+- **leader-2:** activate mapping 2
+- **leader-3:** activate mapping 3
+- **leader-4:** activate mapping 4
+- **[cmd-s]** or `:w[<enter>]` saves the current buffer and re-runs the last test
