@@ -1,4 +1,4 @@
-# Tertestrial plugin for Vim
+# Contest plugin for Vim
 
 ## Installation
 
@@ -7,7 +7,7 @@ Install it like you install all your other plugins.
 
 ##### Vundle users
 
-- add `Bundle 'kevgo/tertestrial-vim'` to your .vimrc file
+- add `Bundle 'contest-framework/vim'` to your .vimrc file
 - restart Vim and run `:BundleInstall`
 
 ##### Pathogen users
@@ -16,7 +16,7 @@ Install it like you install all your other plugins.
 
 ```
 cd ~/.vim/bundle
-git clone git://github.com/kevgo/tertestrial-vim.git
+git clone git://github.com/kevgo/contest-vim.git
 ```
 
 - restart Vim
@@ -27,16 +27,16 @@ To assign keyboard shortcuts to the different test commands,
 put something like this in your `.vimrc` file:
 
 ```viml
-nnoremap <leader>e :call TertestrialAll()<cr>
-nnoremap <leader>f :call TertestrialFile()<cr>
-nnoremap <leader>l :call TertestrialLine()<cr>
-nnoremap <leader>o :call TertestialRepeat()<cr>
-nnoremap <leader>a :call TertestrialToggle()<cr>
-nnoremap <leader>1 :call TertestrialSet(1)<cr>
-nnoremap <leader>2 :call TertestrialSet(2)<cr>
-nnoremap <leader>3 :call TertestrialSet(3)<cr>
-nnoremap <leader>4 :call TertestrialSet(4)<cr>
-autocmd BufWritePost * :call TertestrialFileSaved()
+nnoremap <leader>e :call ContestAll()<cr>
+nnoremap <leader>f :call ContestFile()<cr>
+nnoremap <leader>l :call ContestLine()<cr>
+nnoremap <leader>o :call ContestRepeat()<cr>
+nnoremap <leader>a :call ContestToggle()<cr>
+nnoremap <leader>1 :call ContestSet(1)<cr>
+nnoremap <leader>2 :call ContestSet(2)<cr>
+nnoremap <leader>3 :call ContestSet(3)<cr>
+nnoremap <leader>4 :call ContestSet(4)<cr>
+autocmd BufWritePost * :call ContestFileSaved()
 ```
 
 With these settings, you get the hotkeys:
