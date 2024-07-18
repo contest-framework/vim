@@ -1,25 +1,25 @@
-function! g:TertestrialAll()
+function! g:ContestAll()
   let command = '{}'
   let message = 'running all tests'
   call SendTestCommand(command, message)
 endfunction
 
 
-function! g:TertestrialFile()
+function! g:ContestFile()
   let command = '{"filename": "'.bufname('%').'"}'
   let message = 'testing file '.bufname('%')
   call SendTestCommand(command, message)
 endfunction
 
 
-function! g:TertestrialLine()
+function! g:ContestLine()
   let command = '{"filename": "'.bufname('%').'", "line": "'.line('.').'"}'
   let message = 'testing file '.bufname('%').' at line '.line('.')
   call SendTestCommand(command, message)
 endfunction
 
 
-function! g:TertestrialRepeat(...)
+function! g:ContestRepeat(...)
   let command = '{"repeatLastTest": true}'
   if a:0 == 1
     let message = ''
@@ -30,24 +30,24 @@ function! g:TertestrialRepeat(...)
 endfunction
 
 
-function! g:TertestrialSet(actionSet)
+function! g:ContestSet(actionSet)
   let command = '{"actionSet": '.a:actionSet.'}'
   let message = 'Activate action set '.a:actionSet
   call SendTestCommand(command, message)
 endfunction
 
 
-function! g:TertestrialFileSaved()
-  if g:tertestrialAutotest
-    call TertestrialRepeat('autorepeating')
+function! g:ContestFileSaved()
+  if g:contestAutotest
+    call ContestRepeat('autorepeating')
   endif
 endfunction
 
 
-let g:tertestrialAutotest = 0
-function! g:TertestrialToggle()
-  let g:tertestrialAutotest = 1 - g:tertestrialAutotest
-  if g:tertestrialAutotest
+let g:contestAutotest = 0
+function! g:ContestToggle()
+  let g:contestAutotest = 1 - g:contestAutotest
+  if g:contestAutotest
     echo 'AutoTest ON'
   else
     echo 'AutoTest OFF'
@@ -57,12 +57,12 @@ endfunction
 
 
 function! SendTestCommand(data, message)
-  if findfile('.tertestrial.tmp', '.;') == '.tertestrial.tmp'
-    call writefile([a:data], '.tertestrial.tmp')
+  if findfile('.contest.tmp', '.;') == '.contest.tmp'
+    call writefile([a:data], '.contest.tmp')
     if a:message != ''
       echo a:message
     endif
   else
-    echoerr "ERROR: Tertestrial server is not running!"
+    echoerr "ERROR: Contest server is not running!"
   endif
 endfunction
